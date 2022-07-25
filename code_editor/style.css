@@ -1,0 +1,97 @@
+*{
+    padding: 10;
+    margin: 50;
+    box-sizing: border-box;
+    /* background-color: ; */
+}
+html{
+    font-size: large;
+}
+.editor-menu{
+    width: 100%;
+    height: 3rem;
+    background-color: bisque;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 0 5px 10px ;
+}
+.btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: lightgreen;
+    padding: 8px 5px;
+    border-radius: 3px;
+    font-size: medium;
+    margin-right: 8px;
+    color: brown;
+    min-width: 5rem;
+    /* transition: all .3s; */
+}
+.btn:hover{
+    background-color: orange;
+}
+.live{
+    font-size: medium;
+    font-weight: bold;
+    border: 2px solid orange;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+/* The greater than sign (>) selector in CSS is used to select the element with a specific parent. It is called as element > element selector. It is also known as the child combinator selector which means that it selects only those elements which are direct children of a parent. It looks only one level down the markup structure and not further deep down. Elements which are not the direct child of the specified parent is not selected. */
+.live>*{
+    cursor: pointer;
+}
+.container{
+    position: absolute;
+    bottom: 0;
+    top: 7rem;
+    width: 100%;
+    display: flex;
+}
+.left,.right{
+    height: 100%;
+    width: 50%;
+    border: 1px solid lightgray;
+}
+.bar{
+    width: 4px;
+    height: 100%;
+    background-color: aliceblue;
+    cursor: w-resize;
+}
+.right{
+    /* flex: 1 means the following:
+
+flex-grow : 1;    ➜ The div will grow in same proportion as the window-size       
+flex-shrink : 1;  ➜ The div will shrink in same proportion as the window-size 
+flex-basis : 0;   ➜ The div does not have a starting value as such and will 
+                     take up screen as per the screen size available for
+                     e.g:- if 3 divs are in the wrapper then each div will take 33%. */
+    flex: 1;
+}
+.editor{
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    outline: none;
+    padding: 1rem 0 0 1rem;
+    border-color: green;
+    /* border-width: 10px;
+    border-radius: 10rem;
+    border-spacing: 10rem; */
+}
+.iframe{
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    overflow-y: auto;
+    /* //pre	Whitespace is preserved by the browser. Text will only wrap on line breaks. Acts like the <pre> tag in HTML */
+    white-space: pre;
+    right: 0%;
+    padding: 4px;
+}
